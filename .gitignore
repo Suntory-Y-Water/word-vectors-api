@@ -165,4 +165,3 @@ cython_debug/
 **/__pycache__
 poetry.lock
 .pytest_cache
-models

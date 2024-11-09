@@ -4,8 +4,7 @@ from typing import List
 
 class WordVectors:
     def __init__(self):
-        # self.model = word2vec.Word2Vec.load("./models/jawiki-latest-pages-articles.model")
-        self.model = word2vec.Word2Vec.load()
+        self.model = word2vec.Word2Vec.load("./models/jawiki-latest-pages-articles.model")
 
     # 対応する単語がない場合は空のリストを返す
     def most_similar(self, positive: List[str] | None, negative: List[str], topn=2):
