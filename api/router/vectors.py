@@ -59,3 +59,14 @@ async def calculate_vectors(
         raise
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get(
+    "/hello",
+    response_description="サンプル用のエンドポイント",
+)
+async def hello():
+    try:
+        return {"message": "Hello, FastAPI!"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
