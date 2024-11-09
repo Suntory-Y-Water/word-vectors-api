@@ -1,0 +1,13 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true
+    },
+    "black-formatter.args": [
+        "--line-length=120"
+    ],
+    // リアルタイムで型チェックを行う
+    "python.analysis.typeCheckingMode": "basic",
+    // 仮想環境のPythonインタープリタを使用
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+}

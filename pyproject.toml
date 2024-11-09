@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "word-vectors"
+version = "0.1.0"
+description = ""
+authors = ["sui <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.115.4"
+uvicorn = {extras = ["standard"], version = "^0.32.0"}
+gensim = "^4.3.3"
+mypy = "^1.13.0"
+mecab-python3 = "^1.0.10"
+unidic-lite = "^1.0.8"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
