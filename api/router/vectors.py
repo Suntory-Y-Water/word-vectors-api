@@ -4,7 +4,7 @@ from api.schemas import vectors as vectors_schema
 from api.schemas.response import BadRequestError, NotFoundError, TypedHTTPException
 from api.services import tokenizer
 
-router = APIRouter(prefix="/api/v1", tags=["vectors"])
+router = APIRouter(prefix="/api", tags=["vectors"])
 mecab = tokenizer.Tokenizer()
 vector = vectors_service.WordVectors()
 
@@ -57,16 +57,5 @@ async def calculate_vectors(
         )
     except TypedHTTPException:
         raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@router.get(
-    "/hello",
-    response_description="サンプル用のエンドポイント",
-)
-async def hello():
-    try:
-        return {"message": "Hello, FastAPI!"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
